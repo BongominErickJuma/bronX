@@ -35,7 +35,7 @@
 
 .reveal {
     position: relative;
-    transform: translateY(6.25rem);
+    transform: translateY(4.25rem);
     opacity: 0;
     transition: 2s all ease;
   }
@@ -135,7 +135,11 @@ header {
 
 
 @media(max-width: 62.5rem){
-  
+    section{
+        padding: 5em 1em;
+    }
+
+    
     .nav {
       position: fixed;
       background: var(--clr-dark);
@@ -273,7 +277,7 @@ header {
 }
 
 footer{
-    padding: 5em;
+    padding: 1em;
 }
 
 .working p{
@@ -353,21 +357,28 @@ footer{
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
-    height: 70vh;
+    height: 50vh;
 }
 
 .intro-text{
     position: absolute;
     z-index: 1000;
+    top: 1em;
 }
-
+.intro-text .title{
+    font-size: var(--fs-h2);
+}
 .subtitle{
     font-family: var(--ff-secondary);
+    margin-bottom: 0;
 }
 @media (min-width: 50em) {
     .intro{
         height: calc(70vh + 5em);
         background-size: cover;
+    }
+    .intro-text{
+        top: 5em;
     }
 }
 
@@ -385,7 +396,7 @@ footer{
 
 
 .about div,
-.class-advert div{
+.advert div{
     max-width: 25rem;
     position: absolute;
     z-index: 1000;
@@ -393,7 +404,7 @@ footer{
 
 .intro::after,
 .about::after,
-.class-advert::after{
+.advert::after{
     position: absolute;
     content: "";
     width: 100%;
@@ -403,35 +414,33 @@ footer{
     bottom: 0;    
 }
 
-.class-advert::after{
+.advert::after{
     background-image: linear-gradient(to left, black, transparent);
 }
 .about::after,
 .intro::after{
     background-image: linear-gradient(to right, black, transparent);
 }
-.class-advert{
+.advert{
     background-image: url(../img/bg.jpg);
     background-size: cover;
     height: 100vh;
     position: relative;
 }
-
-.class-advert div{
-    right: 2em;
-}
+.advert div,
 .about div{
     left: 2em;
+    right: 2em;
 }
 
 .about p,
-.class-advert p{
+.advert p{
     font-family: var(--ff-secondary);
 }
 
 @media (min-width: 56.25rem) {
     .about div,
-    .class-advert div{
+    .advert div{
         max-width: 35rem;
 
     }
@@ -525,7 +534,8 @@ footer{
 /*price and plans*/
 
 .price-title{
-    margin: 1em 0 3em;
+    margin: 1em 0;
+    
 }
 
 .pricetag{
